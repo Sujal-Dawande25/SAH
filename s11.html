@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+       body {
+    background-color: #F3EBF6;
+    font-family: 'Ubuntu', sans-serif;
+}
+        .container {
+            width: 30%;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 4px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bacbc3;
+            border-radius: 20px;
+            font-weight: bold;
+            text-align:center;
+            
+        }
+        
+        input[type="submit"] {
+            cursor: pointer;
+          border-radius: 5em;
+         color: #fff;
+          background: linear-gradient(to right, #9C27B0, #E040FB);
+          border: 0;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          font-family: 'Ubuntu', sans-serif;
+          margin-left: 3%;
+          font-size: 13px;
+           box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+        .error-message {
+            color: red;
+        }
+        .form-group label,
+.form-group input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle; 
+    margin-bottom: 5px;
+}
+.container {
+    background-color: #FFFFFF;
+    width: 400px;
+    height: auto;
+
+
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    ;
+}
+.sign {
+    padding-top: 40px;
+    color: #8C55AA;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+.form-group{
+width: 76%;
+color: rgb(74, 92, 92);
+font-weight: bold;
+font-size: 14px;
+letter-spacing: 1px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 1px solid rgba(134, 36, 36, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Ubuntu', sans-serif;
+}
+form {
+   
+    margin: 10px;
+}
+
+label {
+   
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.options {
+    display: none;
+    
+}
+
+/* Style options to display horizontally */
+.options label {
+    display: inline-block;
+    margin-right: 10px;
+}
+.submit{
+    width: 76%;
+color: rgb(74, 92, 92);
+font-weight: bold;
+font-size: 14px;
+letter-spacing: 1px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 1px solid rgba(134, 36, 36, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 20px;
+font-family: 'Ubuntu', sans-serif;
+}
+#signup-button {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 0%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #c220de;
+    text-decoration: none
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <center><h1 class="sign">Sign Up</h1></center>
+        <form id="signup-form" action="pricing.html" method="post">
+            <div class="form-group">
+                <label for="name" ></label>
+                <input type="text" id="name" align="center"  placeholder="Name" name="name" required>
+                <p class="error-message" id="name-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="address"></label>
+                <input type="text" id="address"  align="center" placeholder="Address" name="address" required>
+                <p class="error-message" id="address-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="mobile"></label>
+                <input type="text"  align="center" placeholder="Mobile Number" id="mobile" name="mobile" required>
+                <p class="error-message" id="mobile-error"></p>
+            </div>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email"  align="center" placeholder="Email" id="email" name="email" required>
+                <p class="error-message"  id="email-error"></p>
+            </div>
+            <div class="form-group">
+                
+                <form>
+                   
+                    <div class="top-line">
+                        <label for="student">Staff</label>
+                        <input type="radio" id="student" name="hello" value="student">
+                        <label class="radio-label" for="show-options" id="label">Hostel</label>
+                        <input type="radio" id="show-options" class="radio-button" name="hello"><br><br>
+                  <div class="options" id="options">
+                     <label for="option1">Block-No:</label>
+                     <input type="text" id="option1" name="option2" placeholder="Block no:"><br><br>
+        
+                   <label for="option2">Room-No:</label>
+                      <input type="text" id="option2" name="option2" placeholder="Room no:"><br><br>
+                       
+                    </div>
+                   
+                    
+                    <div class="bottom-line">
+                        <label for="staff">Student</label>
+                        <input type="radio" id="staff" name="hello" value="staff">
+                        
+                        <label for="other">Other</label>
+                        <input type="radio" id="other" name="hello" value="other"><p></p>
+                    </div>
+                    <div class="options" id="options">
+                        <label for="option1">Block-No:</label>
+                        <input type="number" id="option1" name="option1 ">
+                        <label for="option2">Room-No:</label>
+                        <input type="number" id="option2" name="option2"><p></p>
+                
+                    </div>
+                   
+                </form>
+            </div>
+            <button id="signup-button">Sign Up</button>
+            
+                <div class="login-options">
+                    <center>
+                     <br>
+                        <p class="signup-link">Already a user? <a href="index.html">Login</a></p>
+                    </center>
+                </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to validate the form data
+        function validateForm() {
+            const nameInput = document.getElementById('name');
+            const addressInput = document.getElementById('address');
+            const mobileInput = document.getElementById('mobile');
+            const emailInput = document.getElementById('email');
+
+            // Regular expressions for email and mobile number validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const mobileRegex = /^[0-9]{10}$/;
+
+            // Validation flag
+            let isValid = true;
+
+            // Clear previous error messages
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach((element) => {
+                element.textContent = '';
+            });
+
+            // Validate name
+            if (nameInput.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Name is required';
+                isValid = false;
+            }
+
+            // Validate address
+            if (addressInput.value.trim() === '') {
+                document.getElementById('address-error').textContent = 'Address is required';
+                isValid = false;
+            }
+
+            // Validate mobile number
+            if (!mobileRegex.test(mobileInput.value)) {
+                document.getElementById('mobile-error').textContent = 'Invalid mobile number';
+                isValid = false;
+            }
+
+            // Validate email
+            if (!emailRegex.test(emailInput.value)) {
+                document.getElementById('email-error').textContent = 'Invalid email address';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        const form = document.getElementById('signup-form');
+const optionsDiv = document.getElementById('options');
+const label = document.getElementById('label');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Your form validation code here...
+    const nameInput = document.getElementById('name');
+    const mobileInput = document.getElementById('mobile');
+    const emailInput = document.getElementById('email');
+    const option1Input = document.getElementById('option1');
+    const option2Input = document.getElementById('option2');
+
+    let isValid = true;
+
+    // Validation for Name: Only alphabets allowed
+    const namePattern = /^[A-Za-z ]*$/;
+    if (!namePattern.test(nameInput.value)) {
+        document.getElementById('name-error').textContent = 'Name should contain only alphabets';
+        isValid = false;
+    } else {
+        document.getElementById('name-error').textContent = '';
+    }
+
+    // Validation for Mobile Number: Only numbers, exactly 10 digits
+    const mobilePattern = /^[0-9]{10}$/;
+    if (!mobilePattern.test(mobileInput.value)) {
+        document.getElementById('mobile-error').textContent = 'Mobile Number should be a 10-digit number';
+        isValid = false;
+    } else {
+        document.getElementById('mobile-error').textContent = '';
+    }
+
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailPattern.test(emailInput.value)) {
+        document.getElementById('email-error').textContent = 'Invalid email format';
+        isValid = false;
+    } else {
+        document.getElementById('email-error').textContent = '';
+    }
+
+    const blockNumber = parseInt(option1Input.value);
+    if (blockNumber < 1 || blockNumber > 4) {
+        document.getElementById('options-error').textContent = 'Block No should be between 1 and 4';
+        isValid = false;
+    } else {
+        document.getElementById('options-error').textContent = '';
+    }
+
+    const roomNumber = parseInt(option2Input.value);
+    if (roomNumber < 100 || roomNumber > 400) {
+        document.getElementById('options-error').textContent = 'Room No should be between 100 and 400';
+        isValid = false;
+    } else {
+        document.getElementById('options-error').textContent = '';
+    }
+
+    // If all details are correct, redirect to the new page
+    if (isValid) {
+        window.location.href = "login1.html"; // Replace "success.html" with your desired page URL
+    }
+});
+   
+   
+
+        const showOptionsRadio = document.getElementById('show-options');
+        const studentRadio = document.getElementById('student');
+        const staffRadio = document.getElementById('staff');
+        const otherRadio = document.getElementById('other');
+
+        showOptionsRadio.addEventListener('change', () => {
+            if (showOptionsRadio.checked) {
+                optionsDiv.style.display = 'block';
+                label.textContent = 'Hostel';
+            } else {
+                optionsDiv.style.display = 'none';
+                label.textContent = 'Show Options';
+            }
+        });
+
+        studentRadio.addEventListener('change', () => {
+            if (studentRadio.checked) {
+                optionsDiv.style.display = 'block';
+                label.textContent = 'Hostel';
+            }
+            else{
+                optionsDiv.style.display="none";
+                label.textContent=" Show Options "
+            }
+        });
+
+        staffRadio.addEventListener('change', () => {
+            optionsDiv.style.display = 'none';
+        });
+
+        otherRadio.addEventListener('change', () => {
+            optionsDiv.style.display = 'none';
+        });
+        studentRadio.addEventListener('change', () => {
+            optionsDiv.style.display = 'none';
+        });
+        const mobileInput = document.getElementById('mobile');
+
+mobileInput.addEventListener('input', function () {
+    // Remove non-numeric characters
+    this.value = this.value.replace(/\D/g, '');
+
+    // Limit the input to 10 characters
+    if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10);
+    }
+});
+
+const nameInput = document.getElementById('name');
+
+
+nameInput.addEventListener('input', function () {
+    // Use a regular expression to allow only letters and spaces
+    this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+});
+
+const blockInput = document.getElementById('option1');
+
+blockInput.addEventListener('input', function () {
+    // Remove non-numeric characters
+    this.value = this.value.replace(/\D/g, '');
+    
+    // Limit the input to 3 characters
+    if (this.value.length > 1) {
+        this.value = this.value.slice(0, 1);
+    }
+    
+    // Check if the input is within the desired range
+    const blockNumber = parseInt(this.value);
+    if (blockNumber < 1 || blockNumber > 4) {
+        document.getElementById('options-error').textContent = 'Block No should be between 1 and 4';
+    } else {
+        document.getElementById('options-error').textContent = '';
+    }
+    
+});
+
+const roomInput = document.getElementById('option2');
+
+roomInput.addEventListener('input', function () {
+    // Remove non-numeric characters
+    this.value = this.value.replace(/\D/g, '');
+    
+    // Limit the input to 3 characters
+    if (this.value.length > 3) {
+        this.value = this.value.slice(0, 3);
+    }
+    
+    // Check if the input is within the desired range
+    const roomNumber = parseInt(this.value);
+    if (roomNumber < 100 || roomNumber > 400) {
+        document.getElementById('options-error').textContent = 'Room No should be between 100 and 400';
+    } else {
+        document.getElementById('options-error').textContent = '';
+    }
+    
+});
+//signup lavda lassun
+const signupButton = document.getElementById('signup-button');
+
+// Add a click event listener to the signup button
+signupButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Validate the form using the validateForm function you already have
+    const isValid = validateForm();
+
+    // If the form is valid, redirect to "pricing.html"
+    if (isValid) {
+        window.location.href = "pricing.html";
+    }
+});
+
+
+        
+
+
+    </script>
+
+

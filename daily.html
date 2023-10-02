@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="daily.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Revenue</title>
+    <style>
+       
+
+       
+       
+    </style>
+    <script>
+        function addCustomerEntry() {
+           
+            var table = document.getElementById("customerTable");
+
+            
+            var customerNumber = document.getElementById("customerNumber").value;
+            var amount = parseFloat(document.getElementById("amount").value);
+
+           
+            if (isNaN(amount)) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+
+           
+            var newRow = table.insertRow(-1);
+
+            
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+
+            cell1.innerHTML = customerNumber;
+            cell2.innerHTML = "Rs " + amount.toFixed(2);
+
+           
+            document.getElementById("customerNumber").value = "";
+            document.getElementById("amount").value = "";
+
+            
+            calculateTotalAmount();
+        }
+
+        function calculateTotalAmount() {
+            var table = document.getElementById("customerTable");
+            var rowCount = table.rows.length;
+            var totalAmount = 0;
+
+            
+            for (var i = 0; i < rowCount; i++) {
+                var row = table.rows[i];
+                var amountCell = row.cells[1];
+                var amount = parseFloat(amountCell.innerHTML.replace("Rs ", ""));
+                totalAmount += amount;
+            }
+
+            document.getElementById("totalAmount").textContent = "Total Amount: Rs " + totalAmount.toFixed(2);
+        }
+
+        
+        calculateTotalAmount();
+    </script>
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-left">
+          <img src="sah1.png" alt="Logo">
+        </div>
+        <div class="header-right">
+          
+          <a href="index.html">Logout</a>
+        </div>
+      </header>
+    
+    <form >
+        <label for="customerNumber"  >Customer Number:</label>
+        <input class="un" type="text" id="customerNumber" name="customerNumber" placeholder="customer Number"  required><br><br>
+
+        <label for="amount">Amount:</label>
+        <input class="pass" type="text" step="0.01" id="amount" name="amount" placeholder="Amount" required><br><br>
+
+        <button type="button" onclick="addCustomerEntry()">Add Customer Entry</button>
+    </form>
+
+    <h2>Customer Entries</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Customer Number</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody id="customerTable"></tbody>
+    </table><br>
+     <center>
+
+         <b><br><div id="totalAmount"></div></b>
+        </center>
+        <footer>
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p>&copy; 2023 S.a.H Mess Company...</p>
+            </div>
+        </footer>
+
+</body>
+</html>
